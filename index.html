@@ -4,12 +4,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>me</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <style>
+            .gif-container {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .profile-gif {
+                width: 400px;
+                height: auto;
+                border-radius: 16px;
+                border: 2px solid #ddd;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+        </style>
     </head>
 
     <body>
-    </ul>
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGRveGpwajQweXI2enNyYjM0d2x6OW5teGwybGlqNWQxOXhjbGZ1ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mm9enGo4CYC5O/giphy.gif" alt="Profile gif" style="width:300px;height:auto;">
-        <a href="https://zeici.github.io/Me/">me</a>
+    </div>
+        <div class="gif-container">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGRveGpwajQweXI2enNyYjM0d2x6OW5teGwybGlqNWQxOXhjbGZ1ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Mm9enGo4CYC5O/giphy.gif" alt="Profile gif" class="profile-gif">
+            <!-- If you're using a video instead, swap this line with the one below:
+            <video autoplay loop muted playsinline class="profile-gif">
+                <source src="your-gif-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            -->
+        </div>
         </ul> 
     </body>
 </html>
