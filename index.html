@@ -20,6 +20,7 @@
                 background-color: #000000;
                 font-family: "Inria Serif", serif, sans-serif;
                 color: #ffffff;
+                flex-direction: column; /* Đặt nội dung theo chiều dọc */
             }
 
             body {
@@ -29,6 +30,17 @@
                 margin: auto;
                 text-align: center;
                 position: relative;
+            }
+
+            /* Đoạn chữ ở đầu trang */
+            .top-text {
+                font-size: 24px;
+                color: #ffffff;
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 5px;
+                width: 100%;
             }
 
             .gif-container {
@@ -238,10 +250,10 @@
     </head>
 
     <body>
+        <!-- Dòng chữ ở đầu trang -->
+        <div class="top-text"><b>私について知りたいことはすべてここにあります</b></div>
+
         <div class="gif-container">
-            <!-- Dòng chữ ở trên GIF -->
-            <div class="k"><b>私について知りたいことはすべてここにあります</b></div>
-            
             <!-- GIF -->
             <img src="https://i.pinimg.com/originals/e7/26/5c/e7265c39cd7f274bbd0cbfe0a7abd3e2.gif" 
                  alt="Profile gif" class="profile-gif">
