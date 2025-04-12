@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>me</title>
@@ -11,14 +11,15 @@
                 src: url("assets/fonts/inria.ttf");
             }
 
-            html {
+            html, body {
+                height: 100%; /* Đảm bảo toàn bộ trang có chiều cao 100% */
+                margin: 0; /* Xóa bỏ margin mặc định */
+                display: flex;
+                justify-content: center; /* Căn giữa theo chiều ngang */
+                align-items: center; /* Căn giữa theo chiều dọc */
+                background-color: #000000;
                 font-family: "Inria Serif", serif, sans-serif;
                 color: #ffffff;
-                background-color: #000000;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
             }
 
             body {
@@ -27,6 +28,7 @@
                 line-height: 1.618;
                 margin: auto;
                 text-align: center;
+                position: relative;
             }
 
             .gif-container {
@@ -46,7 +48,7 @@
             /* Dòng chữ trên GIF */
             .k {
                 position: absolute;
-                top: 10px;
+                top: 20px;
                 font-size: 21px;
                 color: #ffffff;
                 z-index: 1; /* Đảm bảo chữ nổi lên trên GIF */
