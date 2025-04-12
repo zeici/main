@@ -11,15 +11,14 @@
                 src: url("assets/fonts/inria.ttf");
             }
 
-            html, body {
-                height: 100%; /* Đảm bảo toàn bộ trang có chiều cao 100% */
-                margin: 0; /* Xóa bỏ margin mặc định */
-                display: flex;
-                justify-content: center; /* Căn giữa theo chiều ngang */
-                align-items: center; /* Căn giữa theo chiều dọc */
-                background-color: #000000;
+            html {
                 font-family: "Inria Serif", serif, sans-serif;
                 color: #ffffff;
+                background-color: #000000;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
             }
 
             body {
@@ -30,22 +29,48 @@
                 text-align: center;
             }
 
-            h1, h2, h3, h4, h5, h6 {
-                font-weight: 700;
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-                -epub-word-break: break-all;
-                -ms-word-break: break-all;
-                word-break: break-word;
+            .gif-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative; /* Để cho phép văn bản được đặt lên trên GIF */
             }
 
-            small, sub, sup {
-                font-size: 75%;
+            .profile-gif {
+                width: 690px;
+                height: auto;
+                border: 2px solid #ddd;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             }
 
-            hr {
-                width: 50%;
-                border-color: #ffffff;
+            /* Dòng chữ trên GIF */
+            .k {
+                position: absolute;
+                top: 10px;
+                font-size: 21px;
+                color: #ffffff;
+                z-index: 1; /* Đảm bảo chữ nổi lên trên GIF */
+                background-color: rgba(0, 0, 0, 0.5); /* Làm nền mờ để dễ nhìn chữ */
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .caption {
+                margin-top: 10px;
+                font-size: 19px;
+                color: #333;
+            }
+
+            .k1 {
+                margin-top: 10px;
+                font-size: 17px;
+                color: #333;
+            }
+
+            .k2 {
+                margin-top: 10px;
+                font-size: 19px;
+                color: #ffffff;
             }
 
             a {
@@ -59,6 +84,7 @@
                 filter: blur(0.7px);
             }
 
+            /* Các phần tử trong danh sách */
             ul {
                 padding-left: 1.4em;
                 margin-top: 0px;
@@ -69,6 +95,7 @@
                 margin-bottom: 0.4em;
             }
 
+            /* Blockquote */
             blockquote {
                 margin-left: 0px;
                 margin-right: 0px;
@@ -85,6 +112,7 @@
                 margin-bottom: 0;
             }
 
+            /* Định dạng hình ảnh và video */
             img, video {
                 height: auto;
                 max-width: 100%;
@@ -92,7 +120,7 @@
                 margin-bottom: 0px;
             }
 
-            /* Pre and Code */
+            /* Pre và Code */
             pre {
                 background-color: #4a4a4a;
                 display: block;
@@ -134,6 +162,7 @@
             input, textarea {
                 border: 1px solid #c9c9c9;
             }
+
             input:focus, textarea:focus {
                 border: 1px solid #ffffff;
             }
@@ -155,15 +184,18 @@
                 cursor: pointer;
                 box-sizing: border-box;
             }
+
             .button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
                 cursor: default;
                 opacity: 0.5;
             }
+
             .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
                 background-color: #c9c9c9;
                 color: #222222;
                 outline: 0;
             }
+
             .button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
                 outline-style: solid;
                 outline-width: 2px;
@@ -179,6 +211,7 @@
                 box-shadow: none;
                 box-sizing: border-box;
             }
+
             textarea:focus, select:focus, input:focus {
                 border: 1px solid #ffffff;
                 outline: 0;
@@ -199,65 +232,19 @@
                 vertical-align: middle; 
                 text-align: center;
             }
-
-            /* GIF Centering */
-            .gif-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 20px 0;
-                text-align: center;
-            }
-
-            .profile-gif {
-                width: 690px;
-                height: auto;
-                border: 2px solid #ddd;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            }
-
-            .caption {
-                margin-top: 10px;
-                font-size: 19px;
-                color: #333;
-            }
-
-            .k {
-                margin-top: 10px;
-                font-size: 21px;
-                color: #333;
-            }
-
-            .k1 {
-                margin-top: 10px;
-                font-size: 17px;
-                color: #333;
-            }
-
-            .k2 {
-                margin-top: 10px;
-                font-size: 19px;
-                color: #ffffff;
-            }
-
-            a {
-                color: #d9d9d9;
-                text-decoration: none;
-                transition: all .4s ease-out;
-            }
-
-            a:hover {
-                color: grey;
-                filter: blur(0.7px);
-            }
         </style>
     </head>
 
     <body>
-        <div class="k"><b>私について知りたいことはすべてここにあります</b></div>
         <div class="gif-container">
+            <!-- Dòng chữ ở trên GIF -->
+            <div class="k"><b>私について知りたいことはすべてここにあります</b></div>
+            
+            <!-- GIF -->
             <img src="https://i.pinimg.com/originals/e7/26/5c/e7265c39cd7f274bbd0cbfe0a7abd3e2.gif" 
                  alt="Profile gif" class="profile-gif">
+            
+            <!-- Các liên kết dưới GIF -->
             <div class="caption">
                 <a href="https://zeici.github.io/Me/">me</a> ~ 
                 <a href="https://zeici.github.io/projects/">project</a> ~ 
